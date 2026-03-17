@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Digital Twin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/cesium@1.118/Build/Cesium/Widgets/widgets.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <div id="cesiumContainer" aria-label="3D Earth viewer"></div>
+      <section class="overlay" aria-live="polite">
+        <h1>Earth Digital Twin</h1>
+        <p>
+          Orbit the planet, then scroll to dive from space down to city streets. Data is streamed
+          from public ArcGIS, NASA Black Marble, and OpenStreetMap layers.
+        </p>
+        <div class="controls">
+          <input id="cityInput" type="text" placeholder="Fly to a city (e.g. Tokyo)" />
+          <button id="flyButton" type="button">Fly</button>
+          <button id="homeButton" type="button">Reset View</button>
+        </div>
+        <label class="toggle" for="orbitalEffectsToggle">
+          <input id="orbitalEffectsToggle" type="checkbox" checked />
+          Enable orbital dynamic clouds + atmospheric simulation
+        </label>
+        <label class="toggle" for="nightModeToggle">
+          <input id="nightModeToggle" type="checkbox" />
+          Orbital day/night mode (night shows major city lights)
+        </label>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/cesium@1.118/Build/Cesium/Cesium.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
