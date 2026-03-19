@@ -130,6 +130,7 @@
 
   const viewer = new Cesium.Viewer('cesiumContainer', {
     animation: false,
+    baseLayer: false,
     baseLayerPicker: false,
     fullscreenButton: false,
     geocoder: false,
