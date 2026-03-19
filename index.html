@@ -14,16 +14,20 @@
     <main id="app">
       <div id="cesiumContainer" aria-label="3D Earth viewer"></div>
       <section class="overlay" aria-live="polite">
-        <h1>Earth Digital Twin</h1>
+        <p class="eyebrow">Interactive 3D digital twin</p>
+        <h1>Earth from orbit down to city streets</h1>
         <p>
-          Orbit the planet, then scroll to dive from space down to city streets. Data is streamed
-          from public ArcGIS and OpenStreetMap layers.
+          Start with a realistic full-globe Earth, then zoom seamlessly toward neighborhoods and
+          street-level map detail. The viewer keeps a local Earth texture underneath the public map
+          layers so the planet still looks like Earth even if a remote tile server rate-limits.
         </p>
         <div class="controls">
-          <input id="cityInput" type="text" placeholder="Fly to a city (e.g. Tokyo)" />
+          <input id="cityInput" type="text" placeholder="Fly to a city (e.g. Tallinn, Tokyo)" />
           <button id="flyButton" type="button">Fly</button>
           <button id="homeButton" type="button">Reset View</button>
         </div>
+        <div id="presetButtons" class="preset-buttons" aria-label="Quick city presets"></div>
+        <p id="statusText" class="status"></p>
       </section>
     </main>
 
