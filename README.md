@@ -1,12 +1,12 @@
 # Earth Digital Twin
 
-Interactive 3D Earth viewer built with CesiumJS. It supports smooth camera zoom from space to street-scale satellite imagery, city search, preset fly-to shortcuts, and optional OSM 3D buildings when available.
+Interactive 3D Earth viewer built with CesiumJS. It supports smooth camera zoom from space to street-scale imagery, city search, preset fly-to shortcuts, and optional OSM 3D buildings when available.
 
 ## What changed
 
-- Switched the globe to Cesium World Imagery so the base layer stays on real satellite tiles from orbit down toward street level.
-- Kept OpenStreetMap as a near-ground overlay for labels and familiar street context.
-- Added clearer runtime status messaging for Cesium World Imagery, street labels, and search availability.
+- Added an in-browser fallback Earth texture so the globe still renders with visible continents even if a remote imagery provider blocks or rate-limits requests.
+- Layered public ArcGIS World Imagery and OpenStreetMap tiles on top for realistic satellite views plus street-level labels.
+- Added quick city presets and a clearer status banner so users can tell when the app is using fallback mode.
 
 ## Run locally
 
